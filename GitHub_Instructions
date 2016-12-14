@@ -1,0 +1,35 @@
+Instructions for setting up and using Git
+#This is a data repository to explore and learn data science
+# First we start with Git instructions
+# Git is a program to manage version control on the desktop or server
+# GitHub is a data repository to store and back-up data and code
+# To connect Git and GitHub to RStudio, follow the following steps:
+#1) Set-up a Github account and take tutorials on Github flow and commit-pull-merge
+#2) In RSudio, From Tools> Version Control. Set up Git and an SSH Key. Copy the SSH key
+#3) In Github, enter SSH key on Settings>SSH Keys
+#4) Download and install Git from internet
+#5) Configure git:In RStudio, click Tools -> Shell … . Enter:
+
+#git config --global user.email "mail@ewenharrison.com"
+#git config --global user.name "ewenharrison"
+#Use your GitHub username.
+
+#6) Create a new project and git by New Project > New Directory> Click create git repository
+#7)Now when a new source file is created it will show in the Git tab in RSudio. From there a file can be committed to git on your computer or server
+#8) Now you want to push the contents of this commit to GitHub, so it is also backed-up off site and available to collaborators. In GitHub, create a New repository, called here test.
+#9) In RStudio, again click Tools -> Shell … . Enter:
+
+#git remote add origin https://github.com/ewenharrison/test.git
+#git config remote.origin.url git@github.com:ewenharrison/test.git
+#git pull -u origin master
+#git push -u origin master
+
+#10)You have now pushed your commit to GitHub, and should be able to see your files in your GitHub account. The Pull Push buttons in RStudio will now also work. Remember, after each Commit, you have to Push to GitHub, this doesn’t happen automatically.
+
+#11)Clone an existing GitHub project to new RStudio project
+#In RStudio, click New project as normal. Click Version Control.
+
+#In Clone Git Repository, enter the GitHub repository URL as per below. Change the project directory name if necessary.
+#In RStudio, again click Tools -> Shell … . Enter:
+  
+#  git config remote.origin.url git@github.com:ewenharrison/test.git
